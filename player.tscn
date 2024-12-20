@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://da1ikjelgv4sx"]
+
+[ext_resource type="Script" path="res://character_body_3d.gd" id="1_ch8pe"]
+[ext_resource type="AudioStream" uid="uid://cdmj6hm2x178t" path="res://sounds/footsteps/384873__ali_6868__left-gravel-footstep-1.wav" id="2_iwt4d"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_7sxml"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_v80h0"]
+
+[node name="player" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.159912, 2.0104, 0.539185)
+floor_max_angle = 0.776672
+script = ExtResource("1_ch8pe")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+gi_mode = 2
+mesh = SubResource("CapsuleMesh_7sxml")
+
+[node name="Collider" type="CollisionShape3D" parent="."]
+shape = SubResource("CylinderShape3D_v80h0")
+
+[node name="Head" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.534983, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Head"]
+
+[node name="footstepsound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_iwt4d")
+volume_db = -50.0
+max_db = -0.971
+max_polyphony = 32
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
