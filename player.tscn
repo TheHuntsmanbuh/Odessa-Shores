@@ -5,7 +5,8 @@
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_7sxml"]
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_v80h0"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_myede"]
+size = Vector3(1, 2.00287, 1)
 
 [node name="player" type="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.159912, 2.0104, 0.539185)
@@ -17,7 +18,8 @@ gi_mode = 2
 mesh = SubResource("CapsuleMesh_7sxml")
 
 [node name="Collider" type="CollisionShape3D" parent="."]
-shape = SubResource("CylinderShape3D_v80h0")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00643921, 0)
+shape = SubResource("BoxShape3D_myede")
 
 [node name="Head" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.534983, 0)

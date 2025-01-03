@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://c2govh24j4iqu"]
+
+[ext_resource type="Script" path="res://scripts/LOD.gd" id="1_02qp2"]
+[ext_resource type="PackedScene" uid="uid://bn72rwl0u6rgp" path="res://blendersource/apartments/building_1.blend" id="1_meym8"]
+[ext_resource type="PackedScene" uid="uid://byo5lx2c5xfce" path="res://blendersource/apartments/card_building_1.blend" id="2_w73mb"]
+[ext_resource type="Texture2D" uid="uid://ct53rg05s58hf" path="res://blendersource/textures/apartment_block_card2.png" id="4_euhpk"]
+
+[node name="apartmentbuilding" type="Node3D" groups=["structures"]]
+script = ExtResource("1_02qp2")
+
+[node name="mesh" parent="." instance=ExtResource("1_meym8")]
+
+[node name="low" parent="." instance=ExtResource("2_w73mb")]
+visible = false
+
+[node name="card" type="Sprite3D" parent="."]
+transform = Transform3D(9, 0, 0, 0, 9.24, 0, 0, 0, 123.12, 0, 8, 3)
+visible = false
+billboard = 2
+texture = ExtResource("4_euhpk")

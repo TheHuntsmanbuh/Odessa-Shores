@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1yycunq4hr4j"]
+
+[ext_resource type="PackedScene" uid="uid://bn72rwl0u6rgp" path="res://blendersource/apartments/building_1.blend" id="2_wqm6x"]
+[ext_resource type="PackedScene" uid="uid://byo5lx2c5xfce" path="res://blendersource/apartments/card_building_1.blend" id="3_my2be"]
+
+[node name="building" type="StaticBody3D"]
+
+[node name="building_1" parent="." instance=ExtResource("2_wqm6x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+
+[node name="card_building_1" parent="." instance=ExtResource("3_my2be")]

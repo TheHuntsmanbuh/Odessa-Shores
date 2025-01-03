@@ -11,9 +11,22 @@ config_version=5
 [application]
 
 config/name="Odessa Shores"
-run/main_scene="res://levels/prototyping/testing standards.tscn"
+run/main_scene="res://levels/prototyping/world.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/terrain_3d/plugin.cfg")
+
+[global_group]
+
+structures="every static building or object that does not move and is static"
 
 [input]
 
@@ -56,3 +69,8 @@ crouch={
 [physics]
 
 3d/physics_engine="JoltPhysics3D"
+
+[rendering]
+
+driver/threads/thread_model=2
+occlusion_culling/use_occlusion_culling=true
