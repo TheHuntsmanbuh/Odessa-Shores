@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://tjw1nygjifmn"
-path="res://.godot/imported/playermodel.blend-ff2e0d0197808f71e0a61db46f267b44.scn"
+uid="uid://d37ctpgjlo75b"
+path="res://.godot/imported/metrocop.blend-704f98ef91d51bbabab8ba3e8ae58084.scn"
 
 [deps]
 
-source_file="res://blendersource/playermodel.blend"
-dest_files=["res://.godot/imported/playermodel.blend-ff2e0d0197808f71e0a61db46f267b44.scn"]
+source_file="res://blendersource/metrocop.blend"
+dest_files=["res://.godot/imported/metrocop.blend-704f98ef91d51bbabab8ba3e8ae58084.scn"]
 
 [params]
 
@@ -31,13 +31,7 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-_subresources={
-"nodes": {
-"PATH:os_human_001/Skeleton3D": {
-"rest_pose/external_animation_library": null
-}
-}
-}
+_subresources={}
 blender/nodes/visible=0
 blender/nodes/active_collection_only=false
 blender/nodes/punctual_lights=true

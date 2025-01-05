@@ -1,9 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://da1ikjelgv4sx"]
 
 [ext_resource type="Script" path="res://character_body_3d.gd" id="1_ch8pe"]
+[ext_resource type="PackedScene" uid="uid://tjw1nygjifmn" path="res://blendersource/playermodel.blend" id="2_ccmjb"]
 [ext_resource type="AudioStream" uid="uid://cdmj6hm2x178t" path="res://sounds/footsteps/384873__ali_6868__left-gravel-footstep-1.wav" id="2_iwt4d"]
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_7sxml"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_myede"]
 size = Vector3(1, 2.00287, 1)
@@ -13,9 +12,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.159912, 2.0104, 0.539185)
 floor_max_angle = 0.776672
 script = ExtResource("1_ch8pe")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-gi_mode = 2
-mesh = SubResource("CapsuleMesh_7sxml")
+[node name="playermodel" parent="." instance=ExtResource("2_ccmjb")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -1, 0)
 
 [node name="Collider" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00643921, 0)

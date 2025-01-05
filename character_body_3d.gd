@@ -18,6 +18,7 @@ const JUMP_VELOCITY = 4.5
 @onready var camera = $Head/Camera3D
 @onready var body = $MeshInstance3D
 @onready var bodycolision = $Collider
+@onready var camerapos = camera.position.y
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -45,11 +46,14 @@ func _physics_process(delta: float) -> void:
 		
 	#handle crouch input
 	if Input.is_action_pressed("crouch"):
+		camera.position.y = camera.position.y - 4
 		bodycolision.scale.y = 0.3
 	else:
 		bodycolision.scale.y = 1
 	if Input.is_action_just_released("crouch"):
+		bodycolision.scale.y = 1
 		velocity.y = STANDUP_VELOCITY
+		camera.position.y = camerapos
 	else:
 		pass
 	# Get the input direction and handle the movement/deceleration.

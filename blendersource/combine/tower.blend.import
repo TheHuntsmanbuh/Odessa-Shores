@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://tjw1nygjifmn"
-path="res://.godot/imported/playermodel.blend-ff2e0d0197808f71e0a61db46f267b44.scn"
+uid="uid://dpm4sagcg4nle"
+path="res://.godot/imported/tower.blend-39111e00ec795e03c89e1c6e62c9872a.scn"
 
 [deps]
 
-source_file="res://blendersource/playermodel.blend"
-dest_files=["res://.godot/imported/playermodel.blend-ff2e0d0197808f71e0a61db46f267b44.scn"]
+source_file="res://blendersource/combine/tower.blend"
+dest_files=["res://.godot/imported/tower.blend-39111e00ec795e03c89e1c6e62c9872a.scn"]
 
 [params]
 
@@ -31,13 +31,7 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-_subresources={
-"nodes": {
-"PATH:os_human_001/Skeleton3D": {
-"rest_pose/external_animation_library": null
-}
-}
-}
+_subresources={}
 blender/nodes/visible=0
 blender/nodes/active_collection_only=false
 blender/nodes/punctual_lights=true
